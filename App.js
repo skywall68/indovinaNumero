@@ -5,7 +5,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import GameScreen from './screens/GameScreen';
 import Colors from './components/costanti/colors'
 import GameOverScreen from './screens/GameOverScreen';
-
+//prova per file modificato
 
 export default function App() {
  const [useNumber, setUseNumber]=useState() //questo è il numero scelto dall'utente
