@@ -1,5 +1,7 @@
 import { View, StyleSheet, Alert } from 'react-native'
 import React, { useState, useEffect } from 'react'
+import { Ionicons} from '@expo/vector-icons' // icona usata '+' e '-'
+
 import Title from '../components/game/ui/Title'
 import NumberContainer from '../components/game/NumberContainer'
 import PrimaryButton from '../components/game/ui/PrimaryButton'
@@ -68,10 +70,10 @@ const GameScreen = ({userNumber, onGameOver }) => {
         <InstructionText style={styles.InstructionText}>Maggiore o Minore?</InstructionText>
         <View style={styles.buttonsContainer}>
           <View style={styles.buttonContainer}>
-            <PrimaryButton onPress={nextGuessHandler.bind(this, 'minore')}>-</PrimaryButton>
+            <PrimaryButton onPress={nextGuessHandler.bind(this, 'minore')}> <Ionicons name="remove-outline" size={24} color="yellow" /> </PrimaryButton>
           </View>
            <View style={styles.buttonContainer}>
-             <PrimaryButton onPress={nextGuessHandler.bind(this, 'maggiore')}>+</PrimaryButton>
+             <PrimaryButton onPress={nextGuessHandler.bind(this, 'maggiore')}> <Ionicons name="md-add" size={24} color="yellow" /> </PrimaryButton>
            </View>
           
         </View>
