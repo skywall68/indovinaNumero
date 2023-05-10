@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet} from 'react-native'
 import React from 'react'
-import  Colors  from '../../costanti/colors'
+import Colors from '../../costanti/colors'
 
 
 
@@ -21,13 +21,14 @@ const styles=StyleSheet.create({
     },
 
     title:{
+      fontFamily:'open-sans-bold',
         fontSize:24,
         color:'red',
         borderWidth:2,
         borderColor:Colors.border800,
         borderRadius:8,
         textAlign:'center',
-        fontWeight:'bold',
+        //fontWeight:'bold',
         
 
     }

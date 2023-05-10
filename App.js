@@ -5,12 +5,22 @@ import { LinearGradient } from 'expo-linear-gradient';
 import GameScreen from './screens/GameScreen';
 import Colors from './components/costanti/colors'
 import GameOverScreen from './screens/GameOverScreen';
+import { useFonts } from 'expo-font';
+import AppLoading from 'expo-app-loading';
 //prova per file modificato
 
 export default function App() {
  const [useNumber, setUseNumber]=useState() //questo è il numero scelto dall'utente
  const [gameIsOver, setGameIsOver]=useState(true) //questa variabile mi dice se il gioco è finito, inizia 'true'
                                                   //perchè come se fosse finito.
+ const [fontsLoaded] = useFonts({
+  'open-sans': require('./assets/fonts/OpenSans-Regular.ttf'),
+  'open-sans-bold': require('./assets/fonts/OpenSans-Bold.ttf')
+ }); //creiamo una funzione dove al suo interno abbiamo un oggetto che carica i fonts  
+ 
+ if(!fontsLoaded){
+  return <AppLoading />
+ }
 
  //funzione che mi recupera il numero
  function prendiNumeroHandler(prendiNumero){
